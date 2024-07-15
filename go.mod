@@ -1,6 +1,6 @@
 module github.com/moroaki/web-service-gin
 
-go 1.18
+go 1.22.5
 
 require github.com/gin-gonic/gin v1.8.1
 

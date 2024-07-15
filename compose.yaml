@@ -10,11 +10,14 @@
 services:
   server:
     container_name: app
-    build:
-      context: .
-      target: final
+    volumes:
+      - ./:/app/
+    working_dir: /app
+    tty: true
+    build: "./"
     ports:
       - 8081:8081
+    command: sh -c 'go mod tidy && air'
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the

@@ -9,7 +9,7 @@ import (
 func main() {
 	r := app.SetupRouter()
 
-	if err := r.Run("localhost:8081"); err != nil {
+	if err := r.Run("0.0.0.0:8081"); err != nil {
 		log.Fatal(err)
 	}
 }
